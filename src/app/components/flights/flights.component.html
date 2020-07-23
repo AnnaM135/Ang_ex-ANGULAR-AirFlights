@@ -1,0 +1,13 @@
+<input type="text" [(ngModel)] = "inp" placeholder = "Search..." class="form-control m-25 alert-info text-info">
+<h1 class="text-center text-success m-3">OUR FLIGHTS</h1>
+<div class="text-center alert-info m-5" *ngFor = "let f of flights | search: inp; index as i">
+    <h3 routerLink = "/flights/{{f.id}}" routerLinkActive = "btn-info">{{f.name}}</h3>
+    <h5>{{f.location}}</h5>
+    <p>Number of Passengers {{f.passengersNum}}</p>
+    <button class="btn btn-info" (click) = "forma(f)">Reserve</button>
+    <div [class.hide] = "f.form" class="w-50 mx-auto card alert-success p-3 m-2">
+       Name: <input type="text" placeholder="Enter you name" class="form-control" [(ngModel)] = "inp2[i].anun">
+       Surname: <input type="text" placeholder="Enter your surname" class="form-control" [(ngModel)] = "inp2[i].surname">
+        <button class="btn btn-info" routerLink = "/flights/{{f.id}}" (click) = "ok(i)">Ok</button>
+    </div>
+</div>

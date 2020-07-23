@@ -1,0 +1,21 @@
+<div class="w-50 mx-auto card alert-success p-3 m-2">
+    <h1>Add flight</h1>
+    Country of departure: <input [(ngModel)] = "add.departure" type="text" placeholder="Enter country name" class="form-control m-2">
+    Country of arrival: <input [(ngModel)] = "add.arrival" type="text" placeholder="Enter country name" class="form-control m-2">
+    Ticket price: <input [(ngModel)] = "add.price" type="text" placeholder="Enter ticket price" class="form-control m-2">
+    Data and Time: <input [(ngModel)] = "add.time" type="text" placeholder="Enter Date" class="form-control m-2">
+
+    <select class="form-control w-50 mx-auto m-3 alert-success" [(ngModel)] = "add.air">
+        <option value = "" selected disabled>Airplanes</option>
+        <option *ngFor = "let i of inqnatir">{{i}}</option>
+    </select>
+    <button class="btn btn-success m-2" (click) = "addFlight()">Add Flight</button>
+</div>
+
+
+
+
+
+
+
+

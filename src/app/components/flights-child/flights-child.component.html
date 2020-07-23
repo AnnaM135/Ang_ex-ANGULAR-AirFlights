@@ -1,0 +1,7 @@
+<h1 class="text-info">FLIGHT</h1>
+<h1 class="text-center text-success"> {{flights.name}}</h1>
+<ul class="list-group">
+    <li class="list-group-item list-group-item-info"><b>{{flights.name}}</b> {{flights.location}}</li>
+    <h1 class="text-info">Passagers Names List</h1>
+    <li class="list-group-item list-group-item-info" *ngFor = "let c of flights.customer">{{c.anun}} {{c.surname}}</li>
+</ul>
